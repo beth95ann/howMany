@@ -1,0 +1,27 @@
+int howMany(int number, int digit){
+
+int resultSoFar;
+
+if(number < 10){
+
+   if(number == digit){
+        return 0;
+   }else{
+        return 1;
+        }
+}
+
+    resultSoFar = howMany(number/10, digit);
+    if(number%10 == digit){
+        if(resultSoFar==0){
+            return 1;
+        }else{
+            return 0;
+            }
+    }else{
+        return resultSoFar;
+        }
+
+
+
+}
